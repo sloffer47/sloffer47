@@ -79,9 +79,8 @@
 ---
 
 ## 📫 Me contacter
-- ✉️ **Email** : ton.email@exemple.com  
-- 💼 **LinkedIn** : [linkedin.com/in/tonprofil](https://linkedin.com/in/tonprofil)
-- 🌐 **Portfolio** : [ton-site.dev](https://ton-site.dev)
+- ✉️ **Email** : mbandouyorick@gmail.com 
+
 
 ---
 
