@@ -1,5 +1,5 @@
 <!-- README de profil GitHub pour @sloffer47 -->
-<h1 align="center">🚀 Bienvenue sur mon univers Data • Je suis <span style="color:#00BFFF;">Youri</span> alias <b>sloffer47</b></h1>
+<h1 align="center">🚀 Salut moi c'est <span style="color:#00BFFF;">Yorick MBANDOU</span></h1>
 
 <p align="center">
   <em>Data Engineer •Analysis•MLOps • Cloud • Streaming • Automatisation</em><br/>
