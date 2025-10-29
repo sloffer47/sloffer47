@@ -29,6 +29,8 @@
 | 🛰️ **[vehicle-gps-pipeline](https://github.com/sloffer47/vehicle-gps-pipeline)** | Pipeline streaming de données GPS véhicules : ingestion Kafka → traitement Spark → stockage. | `Kafka`, `Spark`, `Databricks` |
 | ⚙️ **[Projet_jenkins](https://github.com/sloffer47/Projet_jenkins)** | Intégration et déploiement continu pour modèles ML avec Jenkins et Docker. | `Jenkins`, `Docker`, `CI/CD` |
 | 🔄 **[Projet_kafka_pipeline_sparkjob](https://github.com/sloffer47/Projet_kafka_pipeline_sparkjob)** | Traitement temps réel de flux Kafka avec Spark Structured Streaming. | `Kafka`, `Spark`, `Python` |
+| 🧠 **[ETL_Databricks](https://github.com/sloffer47/ETL_Databricks)** | Conception d’un pipeline ETL complet sur Databricks : ingestion brute, nettoyage, transformation PySpark et stockage Delta Lake, entièrement versionné avec Git. | `Databricks`, `PySpark`, `Delta Lake`, `Git`, `ETL` |
+
 
 ---
 
