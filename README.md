@@ -89,3 +89,6 @@
 </p>
 
 <p align="center"><i>« Data Engineering n’est pas juste de la tech, c’est de la précision, de la vision et beaucoup de passion. »</i></p>
+<p align="center">
+  <i>“Les données ne dorment jamais — moi non plus, tant que les pipelines tournent.” 😄</i>
+</p>
