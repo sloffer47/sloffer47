@@ -2,7 +2,7 @@
 <h1 align="center">🚀 Bienvenue sur mon univers Data • Je suis <span style="color:#00BFFF;">Youri</span> alias <b>sloffer47</b></h1>
 
 <p align="center">
-  <em>Ingénieur Data & MLOps passionné par les pipelines, le cloud et l’automatisation.</em><br/>
+  <em>Data Engineer •Analysis•MLOps • Cloud • Streaming • Automatisation</em><br/>
   <small>Python 🐍 | Docker 🐳 | SQL 💾 | Kafka ⚙️ | Databricks 🔥 | Jenkins ⚡ | MLflow 📈 | Kubernetes ☸️ | AWS ☁️ | GCP 🌍</small>
 </p>
 
