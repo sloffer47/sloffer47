@@ -52,12 +52,15 @@
 ---
 
 ## 🔬 Ce que je construis
-- 🚀 Pipelines de données **end-to-end** (ingestion → transformation → monitoring)
+- 🚀 Pipelines de données **end-to-end** (ingestion → transformation → analyse → monitoring)
+- 📊 Analyses exploratoires et création de **dashboards interactifs** avec Power BI et Looker Studio
+- 🧮 Nettoyage, feature engineering et **data storytelling** pour valoriser la donnée avant le ML
 - 🤖 Déploiement automatique de modèles ML avec **Airflow + FastAPI**
 - ⚡ Orchestration CI/CD avec **Jenkins**
 - ☸️ Mise à l’échelle des jobs via **Kubernetes**
 - 🧠 Tracking des expériences avec **MLflow**
 - ☁️ Intégration cloud hybride (**AWS / GCP / Databricks**)
+
 
 ---
 
