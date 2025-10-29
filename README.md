@@ -8,6 +8,8 @@
 
 ---
 
+<img width="1536" height="1024" alt="ChatGPT Image 29 oct  2025, 10_43_42" src="https://github.com/user-attachments/assets/ce01c12c-e8b3-4081-abaf-561359521c41" />
+
 ## 🧠 À propos de moi
 
 | Domaine | Description |
