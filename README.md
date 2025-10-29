@@ -8,152 +8,407 @@
 
 ---
 
-<svg width="1200" height="400" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0f172a"/>
-      <stop offset="50%" style="stop-color:#1e293b"/>
-      <stop offset="100%" style="stop-color:#0f172a"/>
-    </linearGradient>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bannière Data Engineer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #0a0a0a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        #banner {
+            width: 1200px;
+            height: 400px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.3);
+        }
+        
+        .grid-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.05;
+            background-image: 
+                linear-gradient(0deg, transparent 24%, rgba(59, 130, 246, 0.3) 25%, rgba(59, 130, 246, 0.3) 26%, transparent 27%, transparent 74%, rgba(59, 130, 246, 0.3) 75%, rgba(59, 130, 246, 0.3) 76%, transparent 77%, transparent),
+                linear-gradient(90deg, transparent 24%, rgba(59, 130, 246, 0.3) 25%, rgba(59, 130, 246, 0.3) 26%, transparent 27%, transparent 74%, rgba(59, 130, 246, 0.3) 75%, rgba(59, 130, 246, 0.3) 76%, transparent 77%, transparent);
+            background-size: 50px 50px;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #3b82f6;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: float 8s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); opacity: 0.6; }
+            50% { transform: translateY(-300px) translateX(20px); opacity: 0.2; }
+        }
+        
+        .data-flow {
+            position: absolute;
+            left: 50px;
+            top: 50%;
+            width: 200px;
+            height: 200px;
+            transform: translateY(-50%);
+        }
+        
+        .flow-line {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+            width: 150px;
+            animation: pulse 3s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; transform: scaleX(1); }
+            50% { opacity: 0.8; transform: scaleX(1.1); }
+        }
+        
+        .center-content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 10;
+        }
+        
+        .main-title {
+            font-size: 56px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
+            animation: glow 3s ease-in-out infinite;
+        }
+        
+        @keyframes glow {
+            0%, 100% { filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5)); }
+            50% { filter: drop-shadow(0 0 30px rgba(139, 92, 246, 0.8)); }
+        }
+        
+        .subtitle {
+            font-size: 24px;
+            color: #94a3b8;
+            margin: 15px 0 0 0;
+            letter-spacing: 3px;
+            font-weight: 300;
+        }
+        
+        .skills-bar {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 6px;
+            background: rgba(30, 41, 59, 0.6);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .skills-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #10b981);
+            width: 0%;
+            animation: fillBar 2s ease-out forwards;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+        }
+        
+        @keyframes fillBar {
+            to { width: 85%; }
+        }
+        
+        .tech-badges {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 900px;
+        }
+        
+        .badge {
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            backdrop-filter: blur(10px);
+            border: 1px solid;
+            animation: fadeInUp 0.6s ease-out backwards;
+            transition: all 0.3s ease;
+        }
+        
+        .badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .badge-blue {
+            background: rgba(59, 130, 246, 0.15);
+            border-color: #3b82f6;
+            color: #60a5fa;
+        }
+        
+        .badge-green {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: #10b981;
+            color: #34d399;
+        }
+        
+        .badge-purple {
+            background: rgba(139, 92, 246, 0.15);
+            border-color: #8b5cf6;
+            color: #a78bfa;
+        }
+        
+        .badge-orange {
+            background: rgba(245, 158, 11, 0.15);
+            border-color: #f59e0b;
+            color: #fbbf24;
+        }
+        
+        .badge-red {
+            background: rgba(239, 68, 68, 0.15);
+            border-color: #ef4444;
+            color: #f87171;
+        }
+        
+        .badge-cyan {
+            background: rgba(6, 182, 212, 0.15);
+            border-color: #06b6d4;
+            color: #22d3ee;
+        }
+        
+        .icon-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .icon {
+            position: absolute;
+            font-size: 40px;
+            opacity: 0.1;
+            animation: float-icon 6s infinite ease-in-out;
+        }
+        
+        @keyframes float-icon {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+        
+        .gear {
+            position: absolute;
+            right: 150px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 80px;
+            height: 80px;
+            border: 4px solid #10b981;
+            border-radius: 50%;
+            animation: rotate 10s linear infinite;
+            opacity: 0.3;
+        }
+        
+        .gear::before,
+        .gear::after {
+            content: '';
+            position: absolute;
+            background: #10b981;
+            border-radius: 50%;
+        }
+        
+        .gear::before {
+            width: 8px;
+            height: 8px;
+            top: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .gear::after {
+            width: 8px;
+            height: 8px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        @keyframes rotate {
+            from { transform: translateY(-50%) rotate(0deg); }
+            to { transform: translateY(-50%) rotate(360deg); }
+        }
+        
+        .download-btn {
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.5);
+        }
+        
+        .info {
+            color: #64748b;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="banner">
+        <div class="grid-bg"></div>
+        
+        <!-- Particules animées -->
+        <div class="particle" style="left: 15%; top: 20%; animation-delay: 0s;"></div>
+        <div class="particle" style="left: 25%; top: 60%; animation-delay: 1s; background: #10b981;"></div>
+        <div class="particle" style="left: 35%; top: 30%; animation-delay: 2s; background: #8b5cf6;"></div>
+        <div class="particle" style="left: 85%; top: 40%; animation-delay: 0.5s; background: #f59e0b;"></div>
+        <div class="particle" style="left: 75%; top: 70%; animation-delay: 1.5s; background: #06b6d4;"></div>
+        <div class="particle" style="left: 65%; top: 25%; animation-delay: 2.5s; background: #ef4444;"></div>
+        
+        <!-- Flux de données -->
+        <div class="data-flow">
+            <div class="flow-line" style="top: 40px; animation-delay: 0s;"></div>
+            <div class="flow-line" style="top: 80px; animation-delay: 1s; background: linear-gradient(90deg, transparent, #10b981, transparent);"></div>
+            <div class="flow-line" style="top: 120px; animation-delay: 2s; background: linear-gradient(90deg, transparent, #8b5cf6, transparent);"></div>
+        </div>
+        
+        <!-- Engrenage DevOps -->
+        <div class="gear"></div>
+        <div class="gear" style="right: 200px; top: 30%; width: 60px; height: 60px; border-color: #8b5cf6; animation-duration: 8s; animation-direction: reverse;"></div>
+        
+        <!-- Icônes flottantes -->
+        <div class="icon-container">
+            <div class="icon" style="left: 100px; top: 80px; animation-delay: 0s;">⚡</div>
+            <div class="icon" style="right: 100px; top: 100px; animation-delay: 1s;">📊</div>
+            <div class="icon" style="left: 120px; bottom: 100px; animation-delay: 2s;">🚀</div>
+            <div class="icon" style="right: 120px; bottom: 120px; animation-delay: 1.5s;">🔧</div>
+        </div>
+        
+        <!-- Contenu principal -->
+        <div class="center-content">
+            <h1 class="main-title">DATA ENGINEER</h1>
+            <p class="subtitle">ANALYTICS • DEVOPS • CLOUD ARCHITECT</p>
+        </div>
+        
+        <!-- Barre de compétences -->
+        <div class="skills-bar">
+            <div class="skills-progress"></div>
+        </div>
+        
+        <!-- Badges de technologies -->
+        <div class="tech-badges">
+            <span class="badge badge-blue" style="animation-delay: 0.1s;">Python</span>
+            <span class="badge badge-blue" style="animation-delay: 0.2s;">SQL</span>
+            <span class="badge badge-green" style="animation-delay: 0.3s;">Apache Spark</span>
+            <span class="badge badge-purple" style="animation-delay: 0.4s;">Docker</span>
+            <span class="badge badge-purple" style="animation-delay: 0.5s;">Kubernetes</span>
+            <span class="badge badge-cyan" style="animation-delay: 0.6s;">AWS</span>
+            <span class="badge badge-cyan" style="animation-delay: 0.7s;">Azure</span>
+            <span class="badge badge-orange" style="animation-delay: 0.8s;">Airflow</span>
+            <span class="badge badge-red" style="animation-delay: 0.9s;">CI/CD</span>
+            <span class="badge badge-green" style="animation-delay: 1s;">Terraform</span>
+            <span class="badge badge-blue" style="animation-delay: 1.1s;">ETL/ELT</span>
+        </div>
+    </div>
     
-    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#3b82f6"/>
-      <stop offset="50%" style="stop-color:#8b5cf6"/>
-      <stop offset="100%" style="stop-color:#06b6d4"/>
-    </linearGradient>
+    <button class="download-btn" onclick="downloadBanner()">📥 Télécharger la bannière (PNG)</button>
+    <p class="info">Cliquez sur le bouton pour télécharger votre bannière professionnelle</p>
     
-    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#3b82f6"/>
-      <stop offset="50%" style="stop-color:#8b5cf6"/>
-      <stop offset="100%" style="stop-color:#10b981"/>
-    </linearGradient>
-    
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-  </defs>
-  
-  <!-- Background -->
-  <rect width="1200" height="400" fill="url(#bg)" rx="10"/>
-  
-  <!-- Grid pattern -->
-  <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
-    <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.5"/>
-  </pattern>
-  <rect width="1200" height="400" fill="url(#grid)"/>
-  
-  <!-- Particles -->
-  <circle cx="180" cy="100" r="4" fill="#3b82f6" opacity="0.6">
-    <animate attributeName="cy" values="100;350;100" dur="8s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="8s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="300" cy="250" r="3" fill="#10b981" opacity="0.5">
-    <animate attributeName="cy" values="250;80;250" dur="7s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.5;0.2;0.5" dur="7s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="420" cy="120" r="3.5" fill="#8b5cf6" opacity="0.6">
-    <animate attributeName="cy" values="120;340;120" dur="9s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="9s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="1020" cy="180" r="4" fill="#f59e0b" opacity="0.5">
-    <animate attributeName="cy" values="180;320;180" dur="6s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.5;0.2;0.5" dur="6s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="900" cy="280" r="3" fill="#06b6d4" opacity="0.6">
-    <animate attributeName="cy" values="280;100;280" dur="8s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="8s" repeatCount="indefinite"/>
-  </circle>
-  
-  <!-- Data flow lines (left) -->
-  <g opacity="0.4">
-    <path d="M 50 150 L 220 150" stroke="#3b82f6" stroke-width="2" fill="none">
-      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/>
-    </path>
-    <path d="M 50 190 L 220 190" stroke="#10b981" stroke-width="2" fill="none">
-      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3.5s" repeatCount="indefinite"/>
-    </path>
-    <path d="M 50 230 L 220 230" stroke="#8b5cf6" stroke-width="2" fill="none">
-      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="4s" repeatCount="indefinite"/>
-    </path>
-  </g>
-  
-  <!-- DevOps Gears (right) -->
-  <g transform="translate(950, 200)">
-    <circle cx="0" cy="0" r="40" fill="none" stroke="#10b981" stroke-width="3" opacity="0.3">
-      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="10s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="0" cy="-40" r="5" fill="#10b981" opacity="0.4"/>
-    <circle cx="35" cy="-20" r="5" fill="#10b981" opacity="0.4"/>
-    <circle cx="35" cy="20" r="5" fill="#10b981" opacity="0.4"/>
-    <circle cx="0" cy="40" r="5" fill="#10b981" opacity="0.4"/>
-    <circle cx="-35" cy="20" r="5" fill="#10b981" opacity="0.4"/>
-    <circle cx="-35" cy="-20" r="5" fill="#10b981" opacity="0.4"/>
-  </g>
-  
-  <g transform="translate(1000, 250)">
-    <circle cx="0" cy="0" r="28" fill="none" stroke="#8b5cf6" stroke-width="2.5" opacity="0.3">
-      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="8s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="0" cy="-28" r="4" fill="#8b5cf6" opacity="0.4"/>
-    <circle cx="24" cy="-14" r="4" fill="#8b5cf6" opacity="0.4"/>
-    <circle cx="24" cy="14" r="4" fill="#8b5cf6" opacity="0.4"/>
-    <circle cx="0" cy="28" r="4" fill="#8b5cf6" opacity="0.4"/>
-  </g>
-  
-  <!-- Floating Icons -->
-  <text x="100" y="90" font-size="35" opacity="0.15">⚡</text>
-  <text x="1080" y="110" font-size="35" opacity="0.15">📊</text>
-  <text x="120" y="340" font-size="35" opacity="0.15">🚀</text>
-  <text x="1060" y="360" font-size="35" opacity="0.15">🔧</text>
-  
-  <!-- Main Title -->
-  <text x="600" y="150" font-family="Arial, sans-serif" font-size="64" font-weight="900" fill="url(#titleGrad)" text-anchor="middle" filter="url(#glow)" letter-spacing="3">
-    DATA ENGINEER
-  </text>
-  
-  <!-- Subtitle -->
-  <text x="600" y="195" font-family="Arial, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle" letter-spacing="4" font-weight="300">
-    ANALYTICS • DEVOPS • CLOUD ARCHITECT
-  </text>
-  
-  <!-- Skills Progress Bar -->
-  <rect x="200" y="280" width="800" height="6" rx="3" fill="rgba(30, 41, 59, 0.6)"/>
-  <rect x="200" y="280" width="680" height="6" rx="3" fill="url(#barGrad)" filter="url(#glow)">
-    <animate attributeName="width" from="0" to="680" dur="2s" fill="freeze"/>
-  </rect>
-  
-  <!-- Tech Badges -->
-  <g transform="translate(0, 330)">
-    <!-- Row 1 -->
-    <rect x="240" y="0" width="85" height="28" rx="14" fill="rgba(59, 130, 246, 0.2)" stroke="#3b82f6" stroke-width="1"/>
-    <text x="282.5" y="19" font-family="Arial, sans-serif" font-size="13" fill="#60a5fa" text-anchor="middle" font-weight="600">Python</text>
-    
-    <rect x="335" y="0" width="70" height="28" rx="14" fill="rgba(59, 130, 246, 0.2)" stroke="#3b82f6" stroke-width="1"/>
-    <text x="370" y="19" font-family="Arial, sans-serif" font-size="13" fill="#60a5fa" text-anchor="middle" font-weight="600">SQL</text>
-    
-    <rect x="415" y="0" width="110" height="28" rx="14" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" stroke-width="1"/>
-    <text x="470" y="19" font-family="Arial, sans-serif" font-size="13" fill="#34d399" text-anchor="middle" font-weight="600">Apache Spark</text>
-    
-    <rect x="535" y="0" width="80" height="28" rx="14" fill="rgba(139, 92, 246, 0.2)" stroke="#8b5cf6" stroke-width="1"/>
-    <text x="575" y="19" font-family="Arial, sans-serif" font-size="13" fill="#a78bfa" text-anchor="middle" font-weight="600">Docker</text>
-    
-    <rect x="625" y="0" width="105" height="28" rx="14" fill="rgba(139, 92, 246, 0.2)" stroke="#8b5cf6" stroke-width="1"/>
-    <text x="677.5" y="19" font-family="Arial, sans-serif" font-size="13" fill="#a78bfa" text-anchor="middle" font-weight="600">Kubernetes</text>
-    
-    <rect x="740" y="0" width="70" height="28" rx="14" fill="rgba(6, 182, 212, 0.2)" stroke="#06b6d4" stroke-width="1"/>
-    <text x="775" y="19" font-family="Arial, sans-serif" font-size="13" fill="#22d3ee" text-anchor="middle" font-weight="600">AWS</text>
-    
-    <rect x="820" y="0" width="70" height="28" rx="14" fill="rgba(6, 182, 212, 0.2)" stroke="#06b6d4" stroke-width="1"/>
-    <text x="855" y="19" font-family="Arial, sans-serif" font-size="13" fill="#22d3ee" text-anchor="middle" font-weight="600">Azure</text>
-    
-    <rect x="900" y="0" width="75" height="28" rx="14" fill="rgba(245, 158, 11, 0.2)" stroke="#f59e0b" stroke-width="1"/>
-    <text x="937.5" y="19" font-family="Arial, sans-serif" font-size="13" fill="#fbbf24" text-anchor="middle" font-weight="600">Airflow</text>
-  </g>
-</svg>
+    <script>
+        function downloadBanner() {
+            const banner = document.getElementById('banner');
+            
+            // Utiliser html2canvas pour convertir en image
+            const canvas = document.createElement('canvas');
+            canvas.width = 1200;
+            canvas.height = 400;
+            const ctx = canvas.getContext('2d');
+            
+            // Alternative: Utiliser une capture d'écran SVG
+            const data = new XMLSerializer().serializeToString(banner);
+            const svg = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400">
+                    <foreignObject width="100%" height="100%">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="width: 1200px; height: 400px;">
+                            ${banner.outerHTML}
+                        </div>
+                    </foreignObject>
+                </svg>
+            `;
+            
+            const blob = new Blob([svg], {type: 'image/svg+xml'});
+            const url = URL.createObjectURL(blob);
+            const img = new Image();
+            
+            img.onload = function() {
+                ctx.drawImage(img, 0, 0);
+                canvas.toBlob(function(blob) {
+                    const link = document.createElement('a');
+                    link.download = 'data-engineer-banner.png';
+                    link.href = URL.createObjectURL(blob);
+                    link.click();
+                    URL.revokeObjectURL(url);
+                });
+            };
+            
+            img.src = url;
+        }
+    </script>
+</body>
+</html>
 
 ## 🧠 À propos de moi
 
