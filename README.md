@@ -9,11 +9,7 @@
 ---
 
 <p align="center">
-  <img src="https://tonpseudo.github.io/data-engineer-banner/banner.png" alt="Bannière Data Engineer Yorick MBANDOU" width="1000px" style="border-radius:10px; box-shadow:0 0 20px rgba(59,130,246,0.5);"/>
-</p>
-
-<p align="center">
-  🌐 <a href="https://tonpseudo.github.io/data-engineer-banner/" target="_blank">Voir la bannière interactive</a>
+  <img src="assets/banner.png" alt="Bannière Data Engineer Yorick MBANDOU" width="1000px" style="border-radius:10px; box-shadow:0 0 20px rgba(59,130,246,0.5);"/>
 </p>
 
 ---
