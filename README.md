@@ -1,87 +1,99 @@
-<!-- README de profil GitHub pour @sloffer47 -->
-<h1 align="center">🚀 Bienvenue sur mon univers Data • Je suis <span style="color:#00BFFF;">Youri</span> alias <b>sloffer47</b></h1>
+<!--
+💡 Ton README GitHub personnel
+Copie ce contenu dans ton repo public nommé *exactement* comme ton pseudo GitHub
+ex: github.com/sloffer47/sloffer47
+-->
+
+<h1 align="center">👋 Salut, moi c’est <span style="color:#00C3FF;">Youri</span></h1>
 
 <p align="center">
-  <em>Ingénieur Data & MLOps passionné par les pipelines, le cloud et l’automatisation.</em><br/>
-  <small>Python 🐍 | Docker 🐳 | SQL 💾 | Kafka ⚙️ | Databricks 🔥 | Jenkins ⚡ | MLflow 📈 | Kubernetes ☸️ | AWS ☁️ | GCP 🌍</small>
+  <em>🚀 Data Engineer passionné par la Data, le Cloud et l’IA appliquée à la performance industrielle.</em>
 </p>
 
 ---
 
-## 🧠 À propos de moi
+### 🧠 À propos de moi
 
-| Domaine | Description |
-|----------|--------------|
-| 💼 **Profession** | Data Engineer & MLOps Enthusiast |
-| 🧰 **Stack technique** | Python, SQL, Spark, Kafka, Airflow, Jenkins, MLflow, Docker, Kubernetes |
-| ☁️ **Clouds** | AWS, GCP, Databricks |
-| 🧱 **Spécialités** | CI/CD, orchestrations ML, data pipeline, cloud architecture |
-| 🎯 **Objectif** | Construire des systèmes data robustes, scalables et automatisés |
+- 🎯 Je construis des pipelines **robustes et scalables** pour transformer la donnée brute en valeur.  
+- ☁️ Expérience approfondie sur **AWS**, **GCP**, et **Databricks** pour les traitements massifs.  
+- ⚙️ J’automatise les déploiements avec **Docker**, **Airflow**, **Jenkins**, **Kubernetes**, et **MLflow**.  
+- 🧩 J’adore connecter des systèmes avec **Kafka**, **API Python**, et bases de données **SQL**.  
+- 💡 Objectif : **industrialiser la donnée** du modèle jusqu’à la prod avec qualité et monitoring.  
 
 ---
 
-## 📂 Projets phares
+### 🛠️ Stack technique & outils préférés
+
+| Catégorie | Outils principaux |
+|------------|------------------|
+| **Langages** | Python, SQL, Bash |
+| **Orchestration & CI/CD** | Airflow, Jenkins |
+| **Machine Learning / MLOps** | MLflow, Scikit-learn, TensorFlow |
+| **Conteneurisation & Infra** | Docker, Kubernetes, Terraform |
+| **Clouds** | AWS, GCP, Databricks |
+| **Bases de données** | PostgreSQL, MySQL, BigQuery |
+| **Streaming & APIs** | Kafka, FastAPI, Flask |
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,docker,linux,git,kubernetes,aws,gcp,databricks,jenkins,postgresql,mysql,fastapi,airflow" /><br/>
+  <img src="https://skillicons.dev/icons?i=kafka,pytorch,sklearn,tensorflow,vscode,github,terraform,bash" />
+</p>
+
+---
+
+### 🚀 Mes expertises principales
+
+| Domaine | Détails |
+|----------|----------|
+| **Data Engineering** | Orchestration (Airflow), ingestion (Kafka, APIs), transformation (Spark, SQL) |
+| **MLOps** | CI/CD ML, MLflow tracking, modèle en production via Docker/Kubernetes |
+| **Cloud & DevOps** | AWS S3 / Lambda / ECS, GCP BigQuery, Jenkins pipelines |
+| **API & Services** | FastAPI, Flask, endpoints d’inférence temps réel |
+| **Data Platform** | Databricks, Snowflake, pipelines ETL et monitoring qualité |
+
+---
+
+### 💼 Quelques projets marquants
 
 | Projet | Description | Stack principale |
 |--------|--------------|------------------|
-| 🚗 **[MLops_vehicule_price](https://github.com/sloffer47/MLops_vehicule_price)** | Pipeline complet MLOps pour la prédiction du prix des véhicules : Airflow, MLflow, API FastAPI, Docker, retrain & déploiement auto. | `Python`, `Airflow`, `MLflow`, `FastAPI`, `Docker` |
-| 🧱 **[Lakehouse_kubernetes_Project](https://github.com/sloffer47/Lakehouse_kubernetes_Project)** | Architecture Lakehouse sur Kubernetes avec ingestion, stockage et transformation scalable. | `Databricks`, `Kubernetes`, `Spark`, `AWS` |
-| 🛰️ **[vehicle-gps-pipeline](https://github.com/sloffer47/vehicle-gps-pipeline)** | Pipeline streaming de données GPS véhicules : ingestion Kafka → traitement Spark → stockage. | `Kafka`, `Spark`, `Databricks` |
-| ⚙️ **[Projet_jenkins](https://github.com/sloffer47/Projet_jenkins)** | Intégration et déploiement continu pour modèles ML avec Jenkins et Docker. | `Jenkins`, `Docker`, `CI/CD` |
-| 🔄 **[Projet_kafka_pipeline_sparkjob](https://github.com/sloffer47/Projet_kafka_pipeline_sparkjob)** | Traitement temps réel de flux Kafka avec Spark Structured Streaming. | `Kafka`, `Spark`, `Python` |
+| 🚗 **MLOps Vehicule Price** | Automatisation du réentraînement et du déploiement d’un modèle via Airflow + MLflow + Docker. | `Python`, `Airflow`, `MLflow`, `Docker` |
+| 🔁 **Pipeline Kafka–Databricks** | Ingestion temps réel, analyse streaming sur GCP avec Spark et Databricks. | `Kafka`, `Spark`, `GCP`, `Databricks` |
+| ☁️ **CI/CD Jenkins pour API ML** | Déploiement automatisé sur Docker avec tests, notifications et suivi de build. | `Jenkins`, `Docker`, `FastAPI` |
+| 📊 **Dashboard DataOps** | Visualisation et suivi des pipelines data avec Grafana & Prometheus. | `Grafana`, `Prometheus`, `Python` |
 
 ---
 
-## 🧩 Stack technique & outils
+### 📸 Un peu de style !
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,docker,airflow,kafka,aws,gcp,databricks,mlflow,kubernetes,jenkins,fastapi,postgres" />
-</p>
-
-| Catégorie | Technologies |
-|------------|---------------|
-| 💻 Langages | Python, SQL, Bash |
-| ⚙️ Orchestration | Airflow, Jenkins |
-| 🧠 Machine Learning | MLflow, Scikit-learn |
-| ☸️ Conteneurisation | Docker, Kubernetes |
-| ☁️ Cloud | AWS, GCP, Databricks |
-| 📊 Base de données | PostgreSQL, BigQuery, Delta Lake |
-
----
-
-## 🔬 Ce que je construis
-- 🚀 Pipelines de données **end-to-end** (ingestion → transformation → monitoring)
-- 🤖 Déploiement automatique de modèles ML avec **Airflow + FastAPI**
-- ⚡ Orchestration CI/CD avec **Jenkins**
-- ☸️ Mise à l’échelle des jobs via **Kubernetes**
-- 🧠 Tracking des expériences avec **MLflow**
-- ☁️ Intégration cloud hybride (**AWS / GCP / Databricks**)
-
----
-
-## 📈 Statistiques GitHub
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=sloffer47&show_icons=true&theme=tokyonight&hide_border=true" height="160" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sloffer47&layout=compact&theme=tokyonight&hide_border=true" height="160" />
+  <img src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" width="400" alt="Coding gif" />
+  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="400" alt="Data engineer coding" />
 </p>
 
 ---
 
-## 🧭 Vision
-> “Je transforme les flux de données bruts en systèmes intelligents, orchestrés et observables — du pipeline à la production.”
+### 📈 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=sloffer47&show_icons=true&theme=tokyonight&hide_border=true" height="165">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sloffer47&layout=compact&theme=tokyonight&hide_border=true" height="165">
+</p>
 
 ---
 
-## 📫 Me contacter
-- ✉️ **Email** : ton.email@exemple.com  
-- 💼 **LinkedIn** : [linkedin.com/in/tonprofil](https://linkedin.com/in/tonprofil)
-- 🌐 **Portfolio** : [ton-site.dev](https://ton-site.dev)
+### 💬 Contact
+
+📫 **Email :** [ton.email@exemple.com](mailto:ton.email@exemple.com)  
+💼 **LinkedIn :** [linkedin.com/in/tonprofil](https://linkedin.com/in/tonprofil)  
+🌍 **Portfolio :** [ton-site.dev](https://ton-site.dev) *(optionnel)*  
 
 ---
 
 <p align="center">
-  <img src="https://github.com/sloffer47/MLops_vehicule_price/assets/illustration_mlops.gif" width="500px" alt="MLOps pipeline illustration"/>
+  <i>“Les données ne dorment jamais — moi non plus, tant que les pipelines tournent.” 😄</i>
 </p>
 
-<p align="center"><i>« Data Engineering n’est pas juste de la tech, c’est de la précision, de la vision et beaucoup de passion. »</i></p>
+---
+
+✨ _Made with passion, code, and coffee ☕_
